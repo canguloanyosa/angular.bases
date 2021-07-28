@@ -1,0 +1,20 @@
+<p>Listado de Heroes</p>
+
+<div *ngIf="heroClear;else noClear">
+    <h3>Clear Hero <small>{{heroClear}}</small></h3>
+</div>
+
+<ng-template #noClear>
+    <h3>No clear element</h3>
+</ng-template>
+
+<button (click)="clearElement()">
+    Clear
+</button>
+
+<ul>
+    <li *ngFor="let hero of heroes; let i = index">
+        {{i + 1}} - {{hero}}
+    </li>
+</ul>
+
