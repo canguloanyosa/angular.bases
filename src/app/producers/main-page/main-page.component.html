@@ -1,0 +1,28 @@
+<h1>Producers</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- <h3>Producers</h3>
+        <hr>
+        <ul>
+            <li *ngFor="let producer of producers">{{producer.name}} - {{producer.certified}}</li>
+        </ul> -->
+    </div>
+
+    <div class="col">
+        <h3>Agregar</h3>
+        <hr>
+
+        <form (ngSubmit)="agree()">
+            <input type="text" placeholder="Name" name="name" [(ngModel)]="new.name"/>
+            <input type="text" placeholder="Certified" name="certified" [(ngModel)]="new.certified"/>
+            <button type="submit">
+                Agregar
+            </button>
+        </form>
+
+
+    </div>
+
+</div>
